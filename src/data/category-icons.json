@@ -1,0 +1,15 @@
+{
+
+    "icons":[
+
+        { "name": "react", "fileName": "react.svg" },
+        { "name": "nodejs", "fileName": "nodejs.svg" },
+        { "name": "rust", "fileName": "rust.svg" },
+        { "name": "css", "fileName": "css.svg" },
+        { "name": "python", "fileName": "python.svg" },
+        { "name": "git", "fileName": "git.svg" },
+        { "name": "js", "fileName": "js.svg" },
+        { "name": "html", "fileName": "html.svg" }
+
+    ]
+}
