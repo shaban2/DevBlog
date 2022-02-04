@@ -4,12 +4,13 @@
 A web app for creating personal developer blogs.
 
 
-![Detail Screen logo](./assets/Detail-screenshot.png)
+<img src="./assets/Home-screenshot.png" alt=""/>
 
 
 
 
-![Home Screen logo](./assets/Home-screenshot.png)
+<img src="./assets/Detail-screenshot.png" alt=""/>
+
 
 
 
