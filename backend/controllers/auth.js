@@ -111,18 +111,12 @@ exports.add_sheet = (req, res) => {
           content: req.body.content,
           dateCreated: Date.now(),
           lastUpdated: Date.now(),
-          // tags: tagsArr(req.body.tags),
           category: req.body.category,
           createdBy: req.body.userId,
         });
 
         await newSheet.save();
         sheetId = newSheet._id;
-
-        // // Save tags
-        // await saveTags(tagsArr(req.body.tags), req.body.userId, sheetId);
-
-        // // Find tags with the sheet ID and add them in sheet
 
         Category.findOne({ _id: req.body.category }, async (err, catDoc) => {
           if (err) throw err;

@@ -59,9 +59,6 @@ export const NewCategory = (props) => {
       axios
         .post("http://localhost:5000/api/add_category", data)
         .then((res) => {
-          // TODO: Go to category page
-          // http://localhost:3000/60c7775bb3e8821ac86b4731/category/important-notes
-          // console.log(res);
           window.location = "/home";
         })
         .catch((err) => {

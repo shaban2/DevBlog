@@ -12,16 +12,15 @@ export const Main = styled.div`
   grid-template-columns: 2fr 2fr 1fr;
   grid-gap: 40px;
   align-items: center;
+  margin-left: 15px;
   }
 `;
 
 export const Item = styled.div`
-
   padding-right: 15px;
   padding-left: 15px;
   padding-bottom: 30px;
   border: 1px solid black;
-
 `;
 
 export const Grid = styled.div`

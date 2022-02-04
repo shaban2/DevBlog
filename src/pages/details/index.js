@@ -6,8 +6,6 @@ import githubIcon from "../../assets/github.png";
 import linkedinIcon from "../../assets/linked-in.png";
 import { SideBar } from "../../components/sidebar";
 import { useParams } from "react-router-dom";
-import {parseISO } from "date-fns";
-import format from 'date-fns/format'
 import { marked } from "marked";
 import DOMPurify from "dompurify";
 import hljs from "highlight.js";

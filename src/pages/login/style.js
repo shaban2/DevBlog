@@ -46,7 +46,6 @@ export const Wrapper = styled.div`
 
     .buttonContainer {
       width: 270px;
-
       button {
         width: 100%;
         padding: 5px;

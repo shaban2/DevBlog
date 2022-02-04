@@ -3,7 +3,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import devImage from "../../assets/image.jpg";
 import { SideBar } from "../../components/sidebar";
-import { MainContainer, Main, Grid, Item } from "./style";
+import { MainContainer, Main, Item } from "./style";
 import { format, parseISO } from "date-fns";
 import { Container, Row, Col } from "react-awesome-styled-grid";
 
@@ -45,7 +45,7 @@ export const Home = () => {
         <img
           src={devImage}
           alt="Head Shot"
-          style={{ height: "100%", width: "80%" }}
+          style={{ height: "80%", width: "70%" }}
         />
 
         <div>
@@ -57,28 +57,34 @@ export const Home = () => {
         </div>
       </Main>
       <div style={{ marginBottom: "50px" }} />
-      {[...sheets].map((sheet) => {
-        return (
-          <Container>
-            <Row>
-              <Col
-                debug
-                xs={2}
-                
-                style={{ border: "1px solid black", backgroundColor: "white" }}
+
+      <Container>
+        <Row align="center">
+          {sheets.map((sheet) => (
+            <Col
+              debug
+              xs={4}
+              md={2}
+              lg={3}
+              style={{ backgroundColor: "white", border: "1px solid black" }}
+            >
+              <p>{format(parseISO(sheet.dateCreated), "dd.MM.yyyy")}</p>
+              <p
+                style={{
+                  textAlign: "center",
+                  paddingTop: 15,
+                  paddingBottom: 20,
+                }}
               >
-                <p>{format(parseISO(sheet.dateCreated), "dd.MM.yyyy")}</p>
-                <p style={{ textAlign: "center", paddingTop: 15 }}>
-                  <Link to={`/${sheet.createdBy}/sheet/${sheet.slug}`}>
-                    {sheet.title}
-                  </Link>
-                </p>
-              </Col>
-            </Row>
-          </Container>
-        );
-      })}
-      <div style={{ marginBottom: "50px" }} />
+                <Link to={`/${sheet.createdBy}/sheet/${sheet.slug}`}>
+                  {sheet.title}
+                </Link>
+              </p>
+            </Col>
+          ))}
+        </Row>
+      </Container>
+      <br />
     </MainContainer>
   );
 };
